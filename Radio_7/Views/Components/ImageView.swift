@@ -13,7 +13,7 @@ struct ImageView: View {
     
     var body: some View {
         Rectangle()
-            .fill(Color(.gray))
+            .foregroundColor(Color(red: 196/256, green: 196/256, blue: 196/256, opacity: 1.0))
             .frame(width: width, height: height)
     }
 }

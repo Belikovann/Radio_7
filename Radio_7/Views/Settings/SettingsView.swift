@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct SettingsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+    @State private var isToggled = false
+
+       var body: some View {
+           VStack {
+               HStack {
+                   Text("Настройки")
+                       .bold(true)
+                       .font(.title)
+                   Spacer()
+                   Image(systemName: "xmark")
+               }
+               VStack {
+                   Toggle("Автозапуск радио", isOn: $isToggled)
+                   HStack {
+                       Text("Будильник")
+                       Spacer()
+                       Text(isToggled ? "Включен" : "Выключен")
+                           .foregroundColor(.gray)
+                   }
+               }
+           }
+           .padding()
+       }
 }
 
 struct SettingsView_Previews: PreviewProvider {

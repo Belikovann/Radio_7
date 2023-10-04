@@ -8,8 +8,62 @@
 import SwiftUI
 
 struct CityStationView: View {
+    @State var station = Station()
+    
+    var cities = [
+    "Ростов-на-Дону",
+    "Тверь",
+    "Нижний Новогород",
+    "Москва",
+    "Челябинск",
+    "Гусь-Хрустальный",
+    "Новороссийск",
+    "Пермь",
+    "Славянск-на-Кубани",
+    "Великий Новогород"
+    ]
+    
+    var waves = [
+        "89,4 FM",
+        "106,3 FM",
+        "100,0 FM",
+        "104,7 FM",
+        "105,4 FM",
+        "106,6 FM",
+        "107,8 FM",
+        "101,1 FM",
+        "89,9 FM",
+        "99,4 FM"
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 30) {
+            ZStack {
+                Color(red: 217/256, green: 217/256, blue: 217/256, opacity: 1.0)
+                    .frame(width: 390, height: 120)
+                HStack {
+                    TextField("Поиск радиостанции:", text: $station.stationName)
+                        .frame(maxHeight: 30)
+                        .background(.white)
+                        .foregroundColor(.black)
+                    Spacer()
+                    Image(systemName: "xmark")
+                        .foregroundColor(.white)
+                        .bold(true)
+                }
+                .padding()
+            }
+            List(0..<waves.count, id: \.self) { index in
+                StationCityRowView(
+                    city: cities[index],
+                    wave: waves[index]
+                )
+                .listRowSeparator(.hidden)
+            }
+            .listStyle(.plain)
+            
+        }
+        
     }
 }
 

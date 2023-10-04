@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C852942E2ACDBC1B000393C6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852942D2ACDBC1B000393C6 /* DataStore.swift */; };
+		C85294322ACDEF8C000393C6 /* StationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85294312ACDEF8C000393C6 /* StationRowView.swift */; };
+		C85294342ACE0F31000393C6 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85294332ACE0F31000393C6 /* Station.swift */; };
+		C85294362ACE1027000393C6 /* CustomTFStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85294352ACE1027000393C6 /* CustomTFStyle.swift */; };
+		C852943A2ACE12C1000393C6 /* StationCityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85294392ACE12C1000393C6 /* StationCityRowView.swift */; };
 		C8D25EFD2ACCBAB900C60C86 /* Radio_7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25EFC2ACCBAB900C60C86 /* Radio_7App.swift */; };
 		C8D25EFF2ACCBAB900C60C86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25EFE2ACCBAB900C60C86 /* ContentView.swift */; };
 		C8D25F012ACCBABD00C60C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D25F002ACCBABD00C60C86 /* Assets.xcassets */; };
@@ -32,6 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C852942D2ACDBC1B000393C6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		C85294312ACDEF8C000393C6 /* StationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRowView.swift; sourceTree = "<group>"; };
+		C85294332ACE0F31000393C6 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		C85294352ACE1027000393C6 /* CustomTFStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTFStyle.swift; sourceTree = "<group>"; };
+		C85294392ACE12C1000393C6 /* StationCityRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCityRowView.swift; sourceTree = "<group>"; };
 		C8D25EF92ACCBAB900C60C86 /* Radio_7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radio_7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D25EFC2ACCBAB900C60C86 /* Radio_7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio_7App.swift; sourceTree = "<group>"; };
 		C8D25EFE2ACCBAB900C60C86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 		C8D25F0B2ACCBD2200C60C86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C85294332ACE0F31000393C6 /* Station.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 		C8D25F0C2ACCBD3100C60C86 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C852942D2ACDBC1B000393C6 /* DataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -145,6 +157,7 @@
 		C8D25F0D2ACCBD3A00C60C86 /* Modificators */ = {
 			isa = PBXGroup;
 			children = (
+				C85294352ACE1027000393C6 /* CustomTFStyle.swift */,
 			);
 			path = Modificators;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D25F152ACCC01B00C60C86 /* CityStationView.swift */,
+				C85294392ACE12C1000393C6 /* StationCityRowView.swift */,
 			);
 			path = CityStation;
 			sourceTree = "<group>";
@@ -186,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D25F172ACCC04100C60C86 /* StationsView.swift */,
+				C85294312ACDEF8C000393C6 /* StationRowView.swift */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -339,17 +354,22 @@
 				C8D25F2C2ACCC14B00C60C86 /* EpisodeView.swift in Sources */,
 				C8D25F3B2ACCCE1F00C60C86 /* NewsViewModel.swift in Sources */,
 				C8D25F1C2ACCC06E00C60C86 /* FeedView.swift in Sources */,
+				C85294362ACE1027000393C6 /* CustomTFStyle.swift in Sources */,
 				C8D25F202ACCC0AF00C60C86 /* ADView.swift in Sources */,
 				C8D25F392ACCC70D00C60C86 /* ImageView.swift in Sources */,
 				C8D25F0F2ACCBF9700C60C86 /* NewsView.swift in Sources */,
+				C852943A2ACE12C1000393C6 /* StationCityRowView.swift in Sources */,
+				C852942E2ACDBC1B000393C6 /* DataStore.swift in Sources */,
 				C8D25EFF2ACCBAB900C60C86 /* ContentView.swift in Sources */,
 				C8D25F262ACCC0F200C60C86 /* MiniPlayerView.swift in Sources */,
 				C8D25F162ACCC01B00C60C86 /* CityStationView.swift in Sources */,
 				C8D25EFD2ACCBAB900C60C86 /* Radio_7App.swift in Sources */,
+				C85294322ACDEF8C000393C6 /* StationRowView.swift in Sources */,
 				C8D25F2A2ACCC13700C60C86 /* AlarmView.swift in Sources */,
 				C8D25F282ACCC11C00C60C86 /* SettingsView.swift in Sources */,
 				C8D25F132ACCBFC500C60C86 /* PlayerView.swift in Sources */,
 				C8D25F242ACCC0D500C60C86 /* ArticleView.swift in Sources */,
+				C85294342ACE0F31000393C6 /* Station.swift in Sources */,
 				C8D25F3F2ACCD43600C60C86 /* PodcastViewModel.swift in Sources */,
 				C8D25F1A2ACCC05900C60C86 /* PodcastView.swift in Sources */,
 				C8D25F182ACCC04100C60C86 /* StationsView.swift in Sources */,
