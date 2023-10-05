@@ -8,8 +8,58 @@
 import SwiftUI
 
 struct PlayerView: View {
+@State private var isCityStationViewPresent = false
+
+    var artist = [
+    "Savage Garden",
+    "Eagles",
+    "Happy",
+    "Waltz OP.64"
+    ]
+    var song = [
+    "Truly Madly Deeply",
+    "Hotel California",
+    "Pharrell Williams",
+    "Frederic Chopin"
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Button(action: {}) {
+                        Image("burger.menu")
+                    }
+                    Text("Москва")
+                        .foregroundColor(.gray)
+                    Image("geomap")
+                }
+                Image("horizontal.logo")
+                Text("МУЗЫКА ЛЮБВИ")
+                ImageView(width: 252, height: 252)
+                Text("Time Stood Still")
+                Text("Madonna")
+                HStack(spacing: 30) {
+                    Image("list.icon")
+                    Image("play")
+                    Image(systemName: "ellipsis")
+                } .font(.title)
+                List(0..<song.count, id: \.self)
+                { index in
+                    NavigationLink(destination: StationsView()) {
+                        TrackView(
+                            artist: artist[index],
+                            song: song[index]
+                        )
+                    }
+                }
+                .listStyle(.plain)
+            }
+            .padding()
+        }
+//        .sheet(isPresented: $isCityStationViewPresent) {
+//            StationsView(isPresented: $isCityStationViewPresent)
+//        }
     }
 }
 

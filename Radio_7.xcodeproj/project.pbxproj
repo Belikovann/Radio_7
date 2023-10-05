@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C85235D72ACF2B4000E5DACA /* EpisodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85235D62ACF2B4000E5DACA /* EpisodeCellView.swift */; };
+		C85235D92ACF675100E5DACA /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85235D82ACF675100E5DACA /* TrackView.swift */; };
+		C85235DB2ACF6B3900E5DACA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85235DA2ACF6B3900E5DACA /* Coordinator.swift */; };
 		C852942E2ACDBC1B000393C6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852942D2ACDBC1B000393C6 /* DataStore.swift */; };
 		C85294322ACDEF8C000393C6 /* StationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85294312ACDEF8C000393C6 /* StationRowView.swift */; };
 		C85294342ACE0F31000393C6 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85294332ACE0F31000393C6 /* Station.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		C85235D32ACF20DC00E5DACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85235D62ACF2B4000E5DACA /* EpisodeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCellView.swift; sourceTree = "<group>"; };
+		C85235D82ACF675100E5DACA /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		C85235DA2ACF6B3900E5DACA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C852942D2ACDBC1B000393C6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		C85294312ACDEF8C000393C6 /* StationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRowView.swift; sourceTree = "<group>"; };
 		C85294332ACE0F31000393C6 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C852942D2ACDBC1B000393C6 /* DataStore.swift */,
+				C85235DA2ACF6B3900E5DACA /* Coordinator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D25F122ACCBFC500C60C86 /* PlayerView.swift */,
+				C85235D82ACF675100E5DACA /* TrackView.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			files = (
 				C8D25F3D2ACCD42000C60C86 /* PodcastCellView.swift in Sources */,
 				C8D25F2C2ACCC14B00C60C86 /* EpisodeView.swift in Sources */,
+				C85235D92ACF675100E5DACA /* TrackView.swift in Sources */,
 				C8D25F3B2ACCCE1F00C60C86 /* NewsViewModel.swift in Sources */,
 				C8D25F1C2ACCC06E00C60C86 /* FeedView.swift in Sources */,
 				C85294362ACE1027000393C6 /* CustomTFStyle.swift in Sources */,
@@ -375,6 +382,7 @@
 				C8D25EFD2ACCBAB900C60C86 /* Radio_7App.swift in Sources */,
 				C85294322ACDEF8C000393C6 /* StationRowView.swift in Sources */,
 				C8D25F2A2ACCC13700C60C86 /* AlarmView.swift in Sources */,
+				C85235DB2ACF6B3900E5DACA /* Coordinator.swift in Sources */,
 				C8D25F282ACCC11C00C60C86 /* SettingsView.swift in Sources */,
 				C8D25F132ACCBFC500C60C86 /* PlayerView.swift in Sources */,
 				C8EC3E5F2ACECC0D0074251A /* AlarmPickerView.swift in Sources */,

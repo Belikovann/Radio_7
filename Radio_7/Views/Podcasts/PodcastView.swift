@@ -28,13 +28,15 @@ struct PodcastView: View {
             Text("ПОДКАСТЫ")
                 .font(.title)
             List(0..<title.count, id: \.self) { index in
-                PodcastCellView(
-                    date: date[index],
-                    title: title[index],
-                    article: article[index]
+                NavigationLink(destination: FeedView()) {
+                    PodcastCellView(
+                        date: date[index],
+                        title: title[index],
+                        article: article[index]
                     )
                     .listRowSeparator(.hidden)
-                    }
+                }
+            }
                     .listStyle(.plain)
                     }
                     }

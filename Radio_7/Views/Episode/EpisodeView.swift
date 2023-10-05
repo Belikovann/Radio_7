@@ -33,8 +33,10 @@ struct EpisodeView: View {
                 Text("Говорим правильно")
                     .font(.title)
                 Spacer()
-                Image("xmark")
+                Image(systemName: "xmark")
+                    .bold(true)
             }
+            .padding()
             List(0..<time.count, id: \.self) { index in
                 EpisodeCellView(
                     name: name[index],

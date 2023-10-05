@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StationsView: View {
+//    @Binding var isPresented = false
+    
     var station = [
     "Радио 7 Москва",
     "Музыка любви",
@@ -29,9 +31,11 @@ struct StationsView: View {
     
     
     var body: some View {
-        NavigationStack {
-            HStack(alignment: .firstTextBaseline) {
-                Image(systemName: "line.horizontal.3")
+        VStack(alignment: .leading) {
+            HStack(alignment: .center) {
+                Button(action: {}) {
+                    Image("burger.menu")
+                }
                     .padding()
                 Text("ПОТОКИ")
             }
@@ -51,5 +55,8 @@ struct StationsView: View {
 struct StationsView_Previews: PreviewProvider {
     static var previews: some View {
         StationsView()
+//        let isPresented = Binding.constant(false)
+//
+//        StationsView(isPresented: isPresented)
     }
 }
