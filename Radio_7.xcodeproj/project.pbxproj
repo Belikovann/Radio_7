@@ -34,6 +34,7 @@
 		C8D25F3B2ACCCE1F00C60C86 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F3A2ACCCE1F00C60C86 /* NewsViewModel.swift */; };
 		C8D25F3D2ACCD42000C60C86 /* PodcastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F3C2ACCD42000C60C86 /* PodcastCellView.swift */; };
 		C8D25F3F2ACCD43600C60C86 /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F3E2ACCD43600C60C86 /* PodcastViewModel.swift */; };
+		C8EC3E5F2ACECC0D0074251A /* AlarmPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC3E5E2ACECC0D0074251A /* AlarmPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		C8D25F3A2ACCCE1F00C60C86 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		C8D25F3C2ACCD42000C60C86 /* PodcastCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCellView.swift; sourceTree = "<group>"; };
 		C8D25F3E2ACCD43600C60C86 /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
+		C8EC3E5E2ACECC0D0074251A /* AlarmPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D25F292ACCC13700C60C86 /* AlarmView.swift */,
+				C8EC3E5E2ACECC0D0074251A /* AlarmPickerView.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				C8D25F2A2ACCC13700C60C86 /* AlarmView.swift in Sources */,
 				C8D25F282ACCC11C00C60C86 /* SettingsView.swift in Sources */,
 				C8D25F132ACCBFC500C60C86 /* PlayerView.swift in Sources */,
+				C8EC3E5F2ACECC0D0074251A /* AlarmPickerView.swift in Sources */,
 				C8D25F242ACCC0D500C60C86 /* ArticleView.swift in Sources */,
 				C85294342ACE0F31000393C6 /* Station.swift in Sources */,
 				C8D25F3F2ACCD43600C60C86 /* PodcastViewModel.swift in Sources */,

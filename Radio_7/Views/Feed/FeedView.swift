@@ -9,7 +9,22 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                ImageView(width: 317, height: 196)
+                HStack {
+                    ImageView(width: 150.47, height: 150.47)
+                    ImageView(width: 150.47, height: 150.47)
+                }
+                HStack {
+                    ImageView(width: 150.47, height: 150.47)
+                    ImageView(width: 150.47, height: 150.47)
+                }
+                ImageView(width: 317, height: 196)
+            }
+            
+        }
+       
     }
 }
 
