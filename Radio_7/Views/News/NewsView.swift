@@ -14,8 +14,8 @@ struct NewsView: View {
     var body: some View {
         NavigationStack {
                 Text("НОВОСТИ")
-                    .font(.title)
-                    .padding()
+                .font(.custom("TT-Travels-Trial-Medium", size: 28))
+                .padding()
                 List(0..<7, id: \.self) { index in
                     ImageView(width: 317, height: 195.58)
                         .listRowSeparator(.hidden)

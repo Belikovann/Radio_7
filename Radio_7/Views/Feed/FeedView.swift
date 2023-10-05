@@ -22,7 +22,9 @@ struct FeedView: View {
                 }
                 ImageView(width: 317, height: 196)
             }
-            
+            .navigationTitle("Программа")
+            .font(.title)
+            .navigationBarTitleDisplayMode(.inline)
         }
        
     }
