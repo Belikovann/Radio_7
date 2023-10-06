@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct NewsView: View {
-//    Add after setting API
-//    @StateObject private var newsViewModel = NewsViewModel()
+    //    Add after setting API
+    //    @StateObject private var newsViewModel = NewsViewModel()
+    @EnvironmentObject var coordinator: Coordinator
+    
     
     var body: some View {
         NavigationStack {
-                Text("НОВОСТИ")
+            Text("НОВОСТИ")
                 .font(.custom("TT-Travels-Trial-Medium", size: 28))
                 .padding()
-                List(0..<7, id: \.self) { index in
+            
+            List(0..<7, id: \.self) { index in
+                Button(action: {coordinator.navigateTo(screen: .player)}) {
                     ImageView(width: 317, height: 195.58)
                         .listRowSeparator(.hidden)
                 }
-                .listStyle(.plain)
-                
+            }
+            .listStyle(.plain)
         }
         .padding()
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CityStationView: View {
+    @EnvironmentObject var coordinator: Coordinator
     @State var station = Station()
     
     var cities = [
@@ -39,17 +40,21 @@ struct CityStationView: View {
     var body: some View {
         VStack(spacing: 30) {
             ZStack {
-                Color(red: 217/256, green: 217/256, blue: 217/256, opacity: 1.0)
-                    .frame(width: 390, height: 120)
+                GeometryReader { geometry in
+                    Color(red: 217/256, green: 217/256, blue: 217/256, opacity: 1.0)
+                        .frame(width: geometry.size.width, height: 100)
+                }
                 HStack {
                     TextField("Поиск радиостанции:", text: $station.stationName)
                         .frame(maxHeight: 30)
                         .background(.white)
                         .foregroundColor(.black)
                     Spacer()
-                    Image(systemName: "xmark")
-                        .foregroundColor(.white)
-                        .bold(true)
+                    Button(action: {coordinator.navigateTo(screen: .player)}) {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.white)
+                            .bold(true)
+                    }
                 }
                 .padding()
             }

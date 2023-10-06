@@ -28,7 +28,7 @@ struct PodcastView: View {
             Text("ПОДКАСТЫ")
                 .font(.title)
             List(0..<title.count, id: \.self) { index in
-                NavigationLink(destination: FeedView()) {
+                
                     PodcastCellView(
                         date: date[index],
                         title: title[index],
@@ -38,7 +38,6 @@ struct PodcastView: View {
                 }
             }
                     .listStyle(.plain)
-                    }
                     }
 }
 

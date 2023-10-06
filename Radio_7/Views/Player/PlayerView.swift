@@ -8,31 +8,35 @@
 import SwiftUI
 
 struct PlayerView: View {
-@State private var isCityStationViewPresent = false
-
+    @State private var isCityStationViewPresent = false
+    @EnvironmentObject var coordinator: Coordinator
+    
+    
     var artist = [
-    "Savage Garden",
-    "Eagles",
-    "Happy",
-    "Waltz OP.64"
+        "Savage Garden",
+        "Eagles",
+        "Happy",
+        "Waltz OP.64"
     ]
     var song = [
-    "Truly Madly Deeply",
-    "Hotel California",
-    "Pharrell Williams",
-    "Frederic Chopin"
+        "Truly Madly Deeply",
+        "Hotel California",
+        "Pharrell Williams",
+        "Frederic Chopin"
     ]
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {coordinator.navigateTo(screen: .stations)}) {
                         Image("burger.menu")
                     }
-                    Text("Москва")
-                        .foregroundColor(.gray)
-                    Image("geomap")
+                    Button(action: {coordinator.navigateTo(screen: .city)}) {
+                        Text("Москва")
+                            .foregroundColor(.gray)
+                        Image("geomap")
+                    }
                 }
                 Image("horizontal.logo")
                 Text("МУЗЫКА ЛЮБВИ")

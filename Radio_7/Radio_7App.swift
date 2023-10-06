@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Radio_7App: App {
+    @StateObject var coordinator = Coordinator()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(coordinator)
         }
     }
 }
