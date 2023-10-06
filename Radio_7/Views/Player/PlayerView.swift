@@ -45,12 +45,14 @@ struct PlayerView: View {
                 Text("Madonna")
                 HStack(spacing: 30) {
                     Image("list.icon")
-                    Image("play")
+                    Button(action: {coordinator.navigateTo(screen: .mainPhoto)}) {
+                        Image("play")
+                    }
                     Image(systemName: "ellipsis")
                 } .font(.title)
                 List(0..<song.count, id: \.self)
                 { index in
-                    NavigationLink(destination: StationsView()) {
+                    Button(action: {coordinator.navigateTo(screen: .podcasts)}) {
                         TrackView(
                             artist: artist[index],
                             song: song[index]
@@ -61,9 +63,6 @@ struct PlayerView: View {
             }
             .padding()
         }
-//        .sheet(isPresented: $isCityStationViewPresent) {
-//            StationsView(isPresented: $isCityStationViewPresent)
-//        }
     }
 }
 

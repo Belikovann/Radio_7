@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EpisodeView: View {
+    @EnvironmentObject var coordinator: Coordinator
+    
     var name = [
     "Происхождение и значение выражения: «с гаком»",
     "Происхождение и значение слова: «суеверный»",
@@ -33,8 +35,10 @@ struct EpisodeView: View {
                 Text("Говорим правильно")
                     .font(.title)
                 Spacer()
-                Image(systemName: "xmark")
-                    .bold(true)
+                Button(action: {coordinator.navigateTo(screen: .alarm)}) {
+                    Image(systemName: "xmark")
+                        .foregroundColor(.black)
+                }
             }
             .padding()
             List(0..<time.count, id: \.self) { index in

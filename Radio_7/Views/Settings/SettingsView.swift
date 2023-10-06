@@ -9,28 +9,36 @@ import SwiftUI
 
 struct SettingsView: View {
     @State private var isToggled = false
+    @EnvironmentObject var coordinator: Coordinator
 
-       var body: some View {
-           VStack {
-               HStack {
-                   Text("Настройки")
-                       .bold(true)
-                       .font(.title)
-                   Spacer()
-                   Image(systemName: "xmark")
-               }
-               VStack {
-                   Toggle("Автозапуск радио", isOn: $isToggled)
-                   HStack {
-                       Text("Будильник")
-                       Spacer()
-                       Text(isToggled ? "Включен" : "Выключен")
-                           .foregroundColor(.gray)
-                   }
-               }
-           }
-           .padding()
-       }
+
+    var body: some View {
+        NavigationStack {
+            Toggle("Автозапуск радио", isOn: $isToggled)
+                .padding()
+            HStack {
+                Text("Будильник")
+                Spacer()
+                Button(action: {coordinator.navigateTo(screen: .alarm)}) {
+                    Text("Выключен")
+                        .foregroundColor(.gray)
+                }
+            }
+            .padding()
+            Spacer()
+            .navigationTitle("Настройки")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                trailing:
+                    Button(action: {
+                        coordinator.navigateTo(screen: .mainPhoto)
+                    }) {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.black)
+                    }
+            )
+        }
+    }
 }
 
 struct SettingsView_Previews: PreviewProvider {

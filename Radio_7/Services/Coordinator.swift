@@ -9,10 +9,10 @@ import SwiftUI
 
 class Coordinator: ObservableObject {
 
-    @Published var currentScreen: Screens = Screens.news
+    @Published var currentScreen: Screens = Screens.mainPhoto
 
     enum Screens {
-        case news, player, podcasts, feed, cityStation, stations, loader, ad, article, city, settings, alarm, episode
+        case news, player, podcasts, feed, cityStation, stations, loader, ad, article, city, settings, alarm, episode, mainPhoto
     }
 
     func navigateTo(screen: Screens) {

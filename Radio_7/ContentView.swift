@@ -39,6 +39,8 @@ struct ContentView: View {
                 AlarmView()
             case .episode:
                 EpisodeView()
+            case .mainPhoto:
+                TheMainPhotoView()
             }
         }
         .padding()

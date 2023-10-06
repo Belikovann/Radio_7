@@ -9,41 +9,15 @@ import SwiftUI
 
 struct CityStationView: View {
     @EnvironmentObject var coordinator: Coordinator
+    @EnvironmentObject var dataStore: DataStore
     @State var station = Station()
-    
-    var cities = [
-    "Ростов-на-Дону",
-    "Тверь",
-    "Нижний Новогород",
-    "Москва",
-    "Челябинск",
-    "Гусь-Хрустальный",
-    "Новороссийск",
-    "Пермь",
-    "Славянск-на-Кубани",
-    "Великий Новогород"
-    ]
-    
-    var waves = [
-        "89,4 FM",
-        "106,3 FM",
-        "100,0 FM",
-        "104,7 FM",
-        "105,4 FM",
-        "106,6 FM",
-        "107,8 FM",
-        "101,1 FM",
-        "89,9 FM",
-        "99,4 FM"
-    ]
-    
+     
     var body: some View {
         VStack(spacing: 30) {
             ZStack {
-                GeometryReader { geometry in
+                
                     Color(red: 217/256, green: 217/256, blue: 217/256, opacity: 1.0)
-                        .frame(width: geometry.size.width, height: 100)
-                }
+                    .frame(maxWidth: .infinity, maxHeight: 120)
                 HStack {
                     TextField("Поиск радиостанции:", text: $station.stationName)
                         .frame(maxHeight: 30)
@@ -56,12 +30,12 @@ struct CityStationView: View {
                             .bold(true)
                     }
                 }
-                .padding()
             }
-            List(0..<waves.count, id: \.self) { index in
+            
+            List(0..<dataStore.citiesStation.count, id: \.self) { index in
                 StationCityRowView(
-                    city: cities[index],
-                    wave: waves[index]
+                    city: dataStore.citiesStation[index],
+                    wave: dataStore.waves[index]
                 )
                 .listRowSeparator(.hidden)
             }

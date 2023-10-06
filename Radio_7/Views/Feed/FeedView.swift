@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct FeedView: View {
+    @EnvironmentObject var coordinator: Coordinator
     var body: some View {
         NavigationStack {
-            VStack {
-                ImageView(width: 317, height: 196)
-                HStack {
-                    ImageView(width: 150.47, height: 150.47)
-                    ImageView(width: 150.47, height: 150.47)
+            List {
+                Button(action: {coordinator.navigateTo(screen: .article)}) {
+                    FeedGroupView()
                 }
-                HStack {
-                    ImageView(width: 150.47, height: 150.47)
-                    ImageView(width: 150.47, height: 150.47)
-                }
-                ImageView(width: 317, height: 196)
             }
+            .padding()
+            .listStyle(.plain)
+            
             .navigationTitle("Программа")
-            .font(.title)
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                trailing:
+                    Button(action: {
+                        coordinator.navigateTo(screen: .player)
+                    }) {
+                        Image("arrow.left")
+                            .foregroundColor(.black)
+                    }
+            )
         }
-       
     }
 }
 

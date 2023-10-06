@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StationsView: View {
 //    @Binding var isPresented = false
+    @EnvironmentObject var coordinator: Coordinator
+
     
     var station = [
     "Радио 7 Москва",
@@ -33,7 +35,7 @@ struct StationsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
-                Button(action: {}) {
+                Button(action: {coordinator.navigateTo(screen: .player)}) {
                     Image("burger.menu")
                 }
                     .padding()

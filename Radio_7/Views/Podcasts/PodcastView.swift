@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PodcastView: View {
+    @EnvironmentObject var coordinator: Coordinator
     var date = [
         "27.06.2023",
         "24.06.2023"
@@ -28,13 +29,14 @@ struct PodcastView: View {
             Text("ПОДКАСТЫ")
                 .font(.title)
             List(0..<title.count, id: \.self) { index in
-                
+                Button(action: {coordinator.navigateTo(screen: .feed)}) {
                     PodcastCellView(
                         date: date[index],
                         title: title[index],
                         article: article[index]
                     )
                     .listRowSeparator(.hidden)
+                }
                 }
             }
                     .listStyle(.plain)
