@@ -24,11 +24,13 @@ struct StationsView: View {
             }
             .font(.title)
             List(0..<dataStore.stations.count, id: \.self) { index in
-                StationRowView(
-                    station: dataStore.stations[index],
-                    artist: dataStore.artists[index],
-                    track: dataStore.tracks[index])
+                Button(action: {coordinator.navigateTo(screen: .mainPhoto)}) {
+                    StationRowView(
+                        station: dataStore.stations[index],
+                        artist: dataStore.artists[index],
+                        track: dataStore.tracks[index])
                     .listRowSeparator(.hidden)
+                }
             }
             .listStyle(.plain)
         }

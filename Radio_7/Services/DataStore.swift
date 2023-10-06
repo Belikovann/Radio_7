@@ -9,7 +9,7 @@ import Foundation
 
 final class DataStore: ObservableObject {
     
-    static let shared = DataStore()
+//    static let shared = DataStore()
     
     let podcastTitle = [
         "Говорим правильно",

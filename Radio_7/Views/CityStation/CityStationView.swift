@@ -34,10 +34,12 @@ struct CityStationView: View {
                 .padding()
             }
             List(0..<dataStore.citiesStation.count, id: \.self) { index in
-                StationCityRowView(
-                    city: dataStore.citiesStation[index],
-                    wave: dataStore.waves[index]
-                )
+                Button(action: {coordinator.navigateTo(screen: .player)}) {
+                    StationCityRowView(
+                        city: dataStore.citiesStation[index],
+                        wave: dataStore.waves[index]
+                    )
+                }
                 .listRowSeparator(.hidden)
             }
             .listStyle(.plain)

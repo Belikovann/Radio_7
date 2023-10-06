@@ -12,46 +12,54 @@ struct TheMainPhotoView: View {
     @EnvironmentObject var dataStore: DataStore
     
     var body: some View {
+        ZStack(alignment: .bottomTrailing) {
             NavigationStack {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Button(action: {coordinator.navigateTo(screen: .stations)}) {
-                            Image("burger.menu")
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Button(action: {coordinator.navigateTo(screen: .stations)}) {
+                                Image("burger.menu")
+                            }
+                            Button(action: {coordinator.navigateTo(screen: .city)}) {
+                                Text("Москва")
+                                    .foregroundColor(.gray)
+                                Image("geomap")
+                            }
+                            Spacer()
+                            Button(action: {coordinator.navigateTo(screen: .settings)}) {
+                                Image(systemName: "gearshape")
+                                    .foregroundColor(.gray)
+                            }
                         }
-                        Button(action: {coordinator.navigateTo(screen: .city)}) {
-                            Text("Москва")
-                                .foregroundColor(.gray)
-                            Image("geomap")
+                        Image("horizontal.logo")
+                        Text("МУЗЫКА ЛЮБВИ")
+                        ImageView(width: 252, height: 252)
+                        Text("Time Stood Still")
+                        Text("Madonna")
+                        HStack(spacing: 30) {
+                            Image("list.icon")
+                            Image("play")
+                            Image(systemName: "ellipsis")
+                        } .font(.title)
+                        List(0..<dataStore.tracks.count, id: \.self)
+                        { index in
+                            Button(action: {coordinator.navigateTo(screen: .player)}) {
+                                TrackView(
+                                    artist: dataStore.artists[index],
+                                    song: dataStore.tracks[index]
+                                )
+                            }
                         }
-                        Spacer()
-                        Button(action: {coordinator.navigateTo(screen: .settings)}) {
-                            Image(systemName: "gearshape")
-                                .foregroundColor(.gray)
-                        }
+                        .listStyle(.plain)
                     }
-                    Image("horizontal.logo")
-                    Text("МУЗЫКА ЛЮБВИ")
-                    ImageView(width: 252, height: 252)
-                    Text("Time Stood Still")
-                    Text("Madonna")
-                    HStack(spacing: 30) {
-                        Image("list.icon")
-                        Image("play")
-                        Image(systemName: "ellipsis")
-                    } .font(.title)
-                    List(0..<dataStore.tracks.count, id: \.self)
-                    { index in
-                        Button(action: {coordinator.navigateTo(screen: .player)}) {
-                            TrackView(
-                                artist: dataStore.artists[index],
-                                song: dataStore.tracks[index]
-                            )
-                        }
-                    }
-                    .listStyle(.plain)
-                }
-                .padding()
+                    .padding()
             }
+            Button(action: {coordinator.navigateTo(screen: .news)}) {
+                Image("Frame")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 108, height: 108)
+            }
+        }
     }
 }
 

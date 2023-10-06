@@ -15,7 +15,8 @@ struct ArticleCellView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
-            ImageView(width: .infinity, height: 215.36)
+            ImageView(width: 342, height: 215.36)
+
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     Text("\(articleTitle)")

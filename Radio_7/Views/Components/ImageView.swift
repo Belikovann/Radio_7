@@ -20,6 +20,6 @@ struct ImageView: View {
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView(width: 317, height: 195.58)
+        ImageView(width: 317, height: 195)
     }
 }

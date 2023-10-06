@@ -37,7 +37,6 @@
 		C8D25F392ACCC70D00C60C86 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F382ACCC70D00C60C86 /* ImageView.swift */; };
 		C8D25F3B2ACCCE1F00C60C86 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F3A2ACCCE1F00C60C86 /* NewsViewModel.swift */; };
 		C8D25F3D2ACCD42000C60C86 /* PodcastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F3C2ACCD42000C60C86 /* PodcastCellView.swift */; };
-		C8D25F3F2ACCD43600C60C86 /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D25F3E2ACCD43600C60C86 /* PodcastViewModel.swift */; };
 		C8EC3E5F2ACECC0D0074251A /* AlarmPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC3E5E2ACECC0D0074251A /* AlarmPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +73,6 @@
 		C8D25F382ACCC70D00C60C86 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		C8D25F3A2ACCCE1F00C60C86 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		C8D25F3C2ACCD42000C60C86 /* PodcastCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCellView.swift; sourceTree = "<group>"; };
-		C8D25F3E2ACCD43600C60C86 /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
 		C8EC3E5E2ACECC0D0074251A /* AlarmPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,7 +214,6 @@
 			children = (
 				C8D25F192ACCC05900C60C86 /* PodcastView.swift */,
 				C8D25F3C2ACCD42000C60C86 /* PodcastCellView.swift */,
-				C8D25F3E2ACCD43600C60C86 /* PodcastViewModel.swift */,
 			);
 			path = Podcasts;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 				C8EC3E5F2ACECC0D0074251A /* AlarmPickerView.swift in Sources */,
 				C8D25F242ACCC0D500C60C86 /* ArticleView.swift in Sources */,
 				C85294342ACE0F31000393C6 /* Station.swift in Sources */,
-				C8D25F3F2ACCD43600C60C86 /* PodcastViewModel.swift in Sources */,
 				C8D25F1A2ACCC05900C60C86 /* PodcastView.swift in Sources */,
 				C8D25F182ACCC04100C60C86 /* StationsView.swift in Sources */,
 				C8AA30D52AD021D1000ADAB0 /* ArticleCellView.swift in Sources */,
