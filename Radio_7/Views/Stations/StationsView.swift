@@ -8,28 +8,9 @@
 import SwiftUI
 
 struct StationsView: View {
-//    @Binding var isPresented = false
     @EnvironmentObject var coordinator: Coordinator
+    @EnvironmentObject var dataStore: DataStore
 
-    
-    var station = [
-    "Радио 7 Москва",
-    "Музыка любви",
-    "Музыка счастья",
-    "Наедине с музыкой"
-    ]
-    var artist = [
-    "Savage Garden",
-    "Eagles",
-    "Happy",
-    "Waltz OP.64"
-    ]
-    var song = [
-    "Truly Madly Deeply",
-    "Hotel California",
-    "Pharrell Williams",
-    "Frederic Chopin"
-    ]
     
     
     var body: some View {
@@ -42,11 +23,11 @@ struct StationsView: View {
                 Text("ПОТОКИ")
             }
             .font(.title)
-            List(0..<artist.count, id: \.self) { index in
+            List(0..<dataStore.stations.count, id: \.self) { index in
                 StationRowView(
-                    station: station[index],
-                    artist: artist[index],
-                    song: song[index])
+                    station: dataStore.stations[index],
+                    artist: dataStore.artists[index],
+                    track: dataStore.tracks[index])
                     .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
@@ -57,8 +38,5 @@ struct StationsView: View {
 struct StationsView_Previews: PreviewProvider {
     static var previews: some View {
         StationsView()
-//        let isPresented = Binding.constant(false)
-//
-//        StationsView(isPresented: isPresented)
     }
 }

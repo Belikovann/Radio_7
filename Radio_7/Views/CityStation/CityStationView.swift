@@ -15,14 +15,15 @@ struct CityStationView: View {
     var body: some View {
         VStack(spacing: 30) {
             ZStack {
-                
-                    Color(red: 217/256, green: 217/256, blue: 217/256, opacity: 1.0)
+                Rectangle()
+                    .foregroundColor(Color(red: 217/256, green: 217/256, blue: 217/256, opacity: 1.0))
                     .frame(maxWidth: .infinity, maxHeight: 120)
                 HStack {
                     TextField("Поиск радиостанции:", text: $station.stationName)
                         .frame(maxHeight: 30)
                         .background(.white)
                         .foregroundColor(.black)
+                        .padding()
                     Spacer()
                     Button(action: {coordinator.navigateTo(screen: .player)}) {
                         Image(systemName: "xmark")
@@ -30,8 +31,8 @@ struct CityStationView: View {
                             .bold(true)
                     }
                 }
+                .padding()
             }
-            
             List(0..<dataStore.citiesStation.count, id: \.self) { index in
                 StationCityRowView(
                     city: dataStore.citiesStation[index],

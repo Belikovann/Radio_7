@@ -10,7 +10,7 @@ import SwiftUI
 struct StationRowView: View {
     var station: String
     var artist: String
-    var song: String
+    var track: String
     
     var body: some View {
             VStack(spacing: 5) {
@@ -25,7 +25,7 @@ struct StationRowView: View {
                         Text("\(artist)")
                             .font(.callout)
                             .bold(true)
-                        Text("\(song)")
+                        Text("\(track)")
                             .font(.caption)
                     }
                 }
@@ -35,6 +35,6 @@ struct StationRowView: View {
 
 struct StationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        StationRowView(station: "станция", artist: "артист", song: "композация")
+        StationRowView(station: "станция", artist: "артист", track: "композация")
     }
 }

@@ -9,31 +9,18 @@ import SwiftUI
 
 struct PodcastView: View {
     @EnvironmentObject var coordinator: Coordinator
-    var date = [
-        "27.06.2023",
-        "24.06.2023"
-        ]
-       
-    var title = [
-    "Говорим правильно",
-    "Прогулки"
-    ]
-    
-    var article = [
-        "Программа «Говорим правильно» - это совместный проект «Радио 7 на семи холмах» и портала Грамота.Ру о правилах в русском языке. Ведущий рубрики - кандидат филологических наук Владимир Пахомов в простой и легкой манере рассказывает о сложных и даже  курьезных случаях произношения слов.",
-        "В пятницу, субботу и воскресенье известный московский экскурсовод и знаток города на семи холмах Филипп Смирнов открывает для вас все секреты Москвы и предлагает отличные варианты для прогулок по городу!"
-        ]
+    @EnvironmentObject var dataStore: DataStore
     
     var body: some View {
         NavigationStack {
             Text("ПОДКАСТЫ")
                 .font(.title)
-            List(0..<title.count, id: \.self) { index in
+            List(0..<dataStore.podcastTitle.count, id: \.self) { index in
                 Button(action: {coordinator.navigateTo(screen: .feed)}) {
                     PodcastCellView(
-                        date: date[index],
-                        title: title[index],
-                        article: article[index]
+                        date: dataStore.podcastDate[index],
+                        title: dataStore.podcastTitle[index],
+                        article: dataStore.podcastArticles[index]
                     )
                     .listRowSeparator(.hidden)
                 }

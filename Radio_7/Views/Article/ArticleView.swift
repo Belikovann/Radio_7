@@ -9,11 +9,20 @@ import SwiftUI
 
 struct ArticleView: View {
     @EnvironmentObject var coordinator: Coordinator
+    @EnvironmentObject var dataStore: DataStore
+
     
     var body: some View {
         NavigationStack {
-            List(0..<7, id: \.self) { index in
-                ArticleCellView()
+            List(0..<dataStore.articleText.count, id: \.self) { index in
+                Button(action: {coordinator.navigateTo(screen: .mainPhoto)}) {
+                    ArticleCellView(
+                        articleDate: dataStore.articleDates[index],
+                        articleTitle: dataStore.articleTitles[index],
+                        articleName: dataStore.articleNames[index],
+                        articleText: dataStore.articleText[index]
+                    )
+                }
             }
             .listStyle(.plain)
             

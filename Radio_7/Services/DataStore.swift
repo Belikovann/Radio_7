@@ -21,40 +21,40 @@ final class DataStore: ObservableObject {
         "24.06.2023"
     ]
     
-    let podcastArticle = [
+    let podcastArticles = [
         "Программа «Говорим правильно» - это совместный проект «Радио 7 на семи холмах» и портала Грамота.Ру о правилах в русском языке. Ведущий рубрики - кандидат филологических наук Владимир Пахомов в простой и легкой манере рассказывает о сложных и даже  курьезных случаях произношения слов.",
         "В пятницу, субботу и воскресенье известный московский экскурсовод и знаток города на семи холмах Филипп Смирнов открывает для вас все секреты Москвы и предлагает отличные варианты для прогулок по городу!"
     ]
     
-    let station = [
+    let stations = [
         "Радио 7 Москва",
         "Музыка любви",
         "Музыка счастья",
         "Наедине с музыкой"
     ]
     
-    let artist = [
+    let artists = [
         "Savage Garden",
         "Eagles",
         "Happy",
         "Waltz OP.64"
     ]
-    let song = [
+    let tracks = [
         "Truly Madly Deeply",
         "Hotel California",
         "Pharrell Williams",
         "Frederic Chopin"
     ]
     
-    let articleTitle = [
+    let articleTitles = [
         "7 классных фильмов с Джей Ло"
     ]
     
-    let articleDate = [
+    let articleDates = [
         "21 июля в 18:00"
     ]
     
-    let articleName = [
+    let articleNames = [
         "«Госпожа горничная» (2002)"
     ]
     
@@ -88,7 +88,7 @@ final class DataStore: ObservableObject {
         "99,4 FM"
     ]
     
-    var EpisodeName = [
+    var episodeName = [
         "Происхождение и значение выражения: «с гаком»",
         "Происхождение и значение слова: «суеверный»",
         "Происхождение и значение слова «изгваздаться»",
@@ -114,8 +114,4 @@ final class DataStore: ObservableObject {
 }
 
 
-extension DataStore {
-    
-    
-    
-}
+

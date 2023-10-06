@@ -10,20 +10,7 @@ import SwiftUI
 struct PlayerView: View {
     @State private var isCityStationViewPresent = false
     @EnvironmentObject var coordinator: Coordinator
-    
-    
-    var artist = [
-        "Savage Garden",
-        "Eagles",
-        "Happy",
-        "Waltz OP.64"
-    ]
-    var song = [
-        "Truly Madly Deeply",
-        "Hotel California",
-        "Pharrell Williams",
-        "Frederic Chopin"
-    ]
+    @EnvironmentObject var dataStore: DataStore
     
     var body: some View {
         NavigationStack {
@@ -50,12 +37,12 @@ struct PlayerView: View {
                     }
                     Image(systemName: "ellipsis")
                 } .font(.title)
-                List(0..<song.count, id: \.self)
+                List(0..<dataStore.tracks.count, id: \.self)
                 { index in
                     Button(action: {coordinator.navigateTo(screen: .podcasts)}) {
                         TrackView(
-                            artist: artist[index],
-                            song: song[index]
+                            artist: dataStore.artists[index],
+                            song: dataStore.tracks[index]
                         )
                     }
                 }

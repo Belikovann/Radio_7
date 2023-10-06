@@ -9,25 +9,7 @@ import SwiftUI
 
 struct EpisodeView: View {
     @EnvironmentObject var coordinator: Coordinator
-    
-    var name = [
-    "Происхождение и значение выражения: «с гаком»",
-    "Происхождение и значение слова: «суеверный»",
-    "Происхождение и значение слова «изгваздаться»",
-    "Происхождение и значение выражения: «таким макаром»"
-    ]
-    var time = [
-    "1 мин.",
-    "1 мин.",
-    "1 мин.",
-    "1 мин."
-    ]
-    var date = [
-    "27.06.2023",
-    "27.06.2023",
-    "27.06.2023",
-    "27.06.2023"
-    ]
+    @EnvironmentObject var dataStore: DataStore
     
     var body: some View {
         NavigationStack {
@@ -41,11 +23,11 @@ struct EpisodeView: View {
                 }
             }
             .padding()
-            List(0..<time.count, id: \.self) { index in
+            List(0..<dataStore.episodeName.count, id: \.self) { index in
                 EpisodeCellView(
-                    name: name[index],
-                    time: time[index],
-                    date: date[index]
+                    name: dataStore.episodeName[index],
+                    time: dataStore.episodeTime[index],
+                    date: dataStore.episodeDate[index]
                 )
                     .listRowSeparator(.hidden)
             }
